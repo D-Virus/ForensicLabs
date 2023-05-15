@@ -6,12 +6,11 @@
 - **Date**: [Date of the Initial Case]
 
 ## Evidence Information
-- **Evidence ID**: [Unique Evidence Identifier]
-- **Description of Evidence**: [Detailed Description of the Evidence]
-- **Date/Time of Collection**: [When the Evidence was Collected]
-- **Location of Collection**: [Where the Evidence was Collected]
-- **Method of Collection**: [How the Evidence was Collected]
-- **Collected by**: [Person who Collected the Evidence]
+
+| Evidence ID | Description of Evidence | Date/Time of Collection | Location of Collection | Method of Collection | Collected by |
+|-------------|------------------------|-------------------------|------------------------|----------------------|--------------|
+| [ID]        | [Description]          | [Date/Time]             | [Location]             | [Method]             | [Collector]  |
+| [ID]        | [Description]          | [Date/Time]             | [Location]             | [Method]             | [Collector]  |
 
 ## Chain of Custody Log
 
