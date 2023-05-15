@@ -14,16 +14,11 @@
 
 ## Chain of Custody Log
 
-| Date/Time      | Action    | Performed by | Location | Notes |
-|----------------|-----------|--------------|----------|-------|
-| [Date/Time]    | [Action]  | [Individual] | [Location] | [Any additional notes] |
-| [Date/Time]    | [Action]  | [Individual] | [Location] | [Any additional notes] |
-| [Date/Time]    | [Action]  | [Individual] | [Location] | [Any additional notes] |
+| Date/Time      | Action    | Performed by | Location | Notes | Signature |
+|----------------|-----------|--------------|----------|-------|-----------|
+| [Date/Time]    | [Action]  | [Individual] | [Location] | [Any additional notes] | [Signature] |
+| [Date/Time]    | [Action]  | [Individual] | [Location] | [Any additional notes] | [Signature] |
+| [Date/Time]    | [Action]  | [Individual] | [Location] | [Any additional notes] | [Signature] |
 
-## Signatures
+**Note**: The signature confirms that the person named in the "Performed by" column has accurately recorded the details of their action.
 
-I affirm that the information contained in this Chain of Custody Document is complete and accurate to the best of my knowledge.
-
-**[Your Name]**: ___________________________________________    **Date**: ___________
-
-**[Supervisor's Name]**: ____________________________________    **Date**: ___________
