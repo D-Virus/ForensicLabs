@@ -1,5 +1,7 @@
 # Author: @dvirus
 # This script simulates user web-browsing with some of the most popular websites
+# Requirements: Selemium and Chrome Driver
+
 from selenium import webdriver
 
 # using Chrome WebDriver
