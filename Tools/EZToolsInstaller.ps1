@@ -1,4 +1,7 @@
- function Unzip
+#Eric Zimmerman Forensic Tools Installer
+#Author: Daniel Rodriguez 
+
+function Unzip
 {
     param([string]$zipfile, [string]$outpath)
 
