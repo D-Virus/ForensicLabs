@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# Author: dvirus
+# Description: This script installs chainsaw, Sigma rules, and EVTX-ATTACK-SAMPLES in /opt/chainsaw.
+
 import subprocess
 import os
 
