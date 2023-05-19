@@ -16,6 +16,12 @@ run_command("apt update")
 # Install cargo
 run_command("apt install -y cargo")
 
+# Create the directory where everything will be installed
+run_command("mkdir -p /opt/chainsaw")
+
+# Change to the installation directory
+os.chdir("/opt/chainsaw")
+
 # Clone chainsaw repository
 run_command("git clone https://github.com/countercept/chainsaw.git")
 
@@ -26,7 +32,14 @@ os.chdir("chainsaw")
 run_command("cargo build --release")
 
 # Move chainsaw binary to /usr/local/bin to make it globally accessible
-run_command("cp ./target/release/chainsaw /usr/local/bin/")
+run_command("mv ./target/release/chainsaw /usr/local/bin/")
+
+# Change directory back to /opt/chainsaw
+os.chdir("/opt/chainsaw")
+
+# Clone Sigma and EVTX-ATTACK-SAMPLES repositories
+run_command("git clone https://github.com/SigmaHQ/sigma.git")
+run_command("git clone https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES.git")
 
 # Check chainsaw version
 run_command("chainsaw --version")
