@@ -1,3 +1,5 @@
+# Author: @dvirus
+# This script runs kape via Microsoft Windows Defender via LiveResponse Session
 #Path definitions 
 $zipFilePath = "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\kape.zip"
 $tempExtractPath = [System.IO.Path]::GetTempPath() + "kape"
