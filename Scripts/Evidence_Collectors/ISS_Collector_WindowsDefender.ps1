@@ -1,0 +1,25 @@
+# Author: @dvirus
+# This script runs kape via Microsoft Windows Defender via LiveResponse Session
+$zipFilePath = "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\kape_q4_2023.zip"
+$extractPath = "C:\Windows\Temp\kape"
+
+# Check if the extraction directory exists, if not, create it
+if (-not (Test-Path -Path $extractPath -PathType Container)) {
+    New-Item -ItemType Directory -Path $extractPath -Force | Out-Null
+}
+
+# Unzip the file using the built-in ComObject Shell.Application
+$shell = New-Object -ComObject Shell.Application
+$zipFile = $shell.NameSpace($zipFilePath)
+$destination = $shell.NameSpace($extractPath)
+$destination.CopyHere($zipFile.Items())
+
+# Wait for the extraction process to complete 
+while ($destination.Items().Count -ne $zipFile.Items().Count) {
+    Start-Sleep -Seconds 1
+}
+
+# Execute the kape.exe with the given parameters
+$command = "C:\Windows\Temp\kape\kape.exe"
+$params = "--tsource C:\ --tdest C:\Windows\Temp\kape\output --tflush --target !IISLogFiles --zip kapeoutput"
+Start-Process -FilePath $command -ArgumentList $params -Wait
