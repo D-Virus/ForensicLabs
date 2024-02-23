@@ -21,6 +21,6 @@ while ($destination.Items().Count -ne $zipFile.Items().Count) {
 
 # Execute the kape.exe with the given parameters
 $command = "C:\kape\kape.exe"
-$params = "--tsource C:\ --tdest C:\kape\output --tflush --target !IISLogFiles --zip kapeoutput"
+$params = "--tsource C:\ --tdest C:\kape\output --tflush --target IISLogFiles --zip kapeoutput"
 Start-Process -FilePath $command -ArgumentList $params -Wait
 
